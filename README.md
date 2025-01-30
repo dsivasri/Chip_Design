@@ -19,9 +19,9 @@
 ![Screenshot 2025-01-29 191753](https://github.com/user-attachments/assets/2a4a4d41-cb97-4a43-8ad9-54c6bfaa2bf3)
 ![Screenshot 2025-01-29 205516](https://github.com/user-attachments/assets/04886af5-14e1-426b-904e-2941a50b188e)
 Calcuating the flop ratio:
-Flop ratio = (no. of dfxtp / total no. of cells)100
-           = (1613/14876)100
-           = (0.108)100
+Flop ratio = (no. of dfxtp / total no. of cells) * 100
+           = (1613/14876) * 100
+           = 0.108 * 100
            = 10.8
 ![Screenshot 2025-01-29 210943](https://github.com/user-attachments/assets/1610da95-b8f1-4192-8727-fd36cde707b0)
 ![Screenshot 2025-01-30 205303](https://github.com/user-attachments/assets/14acc533-bfb3-4792-a03b-550628dc88c8)
