@@ -29,3 +29,7 @@ Flop ratio = (no. of dfxtp / total no. of cells) * 100
 ![Screenshot 2025-01-30 213409](https://github.com/user-attachments/assets/e96b0628-44f5-4510-a5eb-7fefb272a29a)
 ![Screenshot 2025-01-30 220955](https://github.com/user-attachments/assets/e737f2ff-1ab9-433d-b17c-48d54482ff55)
 ![Screenshot 2025-01-30 221134](https://github.com/user-attachments/assets/24fa8b58-607a-4310-a9b0-de0deb9928fd)
+![Screenshot 2025-02-01 155342](https://github.com/user-attachments/assets/136a81f0-82db-413a-8106-1b24cf2f111b)
+![Screenshot 2025-02-01 155418](https://github.com/user-attachments/assets/ccf5bce1-e9bc-4c0e-b64c-29b42b87c58b)
+![Screenshot 2025-02-01 155453](https://github.com/user-attachments/assets/e6cb0b9e-1813-4fdc-a238-20ddf04162be)
+![Screenshot 2025-02-01 155529](https://github.com/user-attachments/assets/52b39735-20d8-4307-9120-9aaf44bc1e40)
