@@ -1,5 +1,4 @@
-# Day 1
-## Theory:
+# Theory:
 ![edc3ba09-1ed8-4804-92ec-f714a70b9ff4](https://github.com/user-attachments/assets/87175589-b192-457f-9ea2-a2ed55e3a136)
 ![Screenshot 2025-01-29 185834](https://github.com/user-attachments/assets/ebeceb99-0d03-4464-86ea-25f268c0f864)
 ![Screenshot 2025-01-29 190028](https://github.com/user-attachments/assets/2a182f96-bc7d-4b17-bfeb-0d0efc943b9f)
@@ -12,7 +11,7 @@
 ![df2b2ec6-b007-4616-899f-2df0cd14a9d2](https://github.com/user-attachments/assets/47a17e06-f91f-44a9-a433-08fcfb70d6b2)
 ![5eea08af-66eb-45bb-9474-cd9a9471974f](https://github.com/user-attachments/assets/8b102272-1800-4ac5-8321-4c1f39ed049b)
 
-## Labs:
+# Labs:
 ![Screenshot 2025-01-29 191259](https://github.com/user-attachments/assets/ae663da9-a13d-47b4-958b-fae78f29182b)
 ![Screenshot 2025-01-29 191416](https://github.com/user-attachments/assets/2fe4a288-d422-40f4-8293-57e663c1e9c9)
 ![Screenshot 2025-01-29 191652](https://github.com/user-attachments/assets/63147db4-b4b4-40d3-8c2d-f77132132762)
