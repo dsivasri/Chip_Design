@@ -1,0 +1,70 @@
+module uart_rx_8n1 (
+    input clk,            // input clock
+    input rx,            // incoming data
+    output reg [7:0] rxbyte, // received byte
+    output reg data_valid // data valid signal
+);
+
+    /* Parameters */
+    parameter STATE_IDLE = 2'b00;
+    parameter STATE_START = 2'b01;
+    parameter STATE_DATA = 2'b10;
+    parameter STATE_STOP = 2'b11;
+
+    /* State variables */
+    reg [1:0] state = STATE_IDLE;
+    reg [3:0] bit_count = 4'b0;
+    reg [7:0] shift_reg = 8'b0;
+    reg [15:0] clk_div = 16'b0; // Clock divider for sampling
+
+    /* Clock divider for baud rate */
+    parameter BAUD_RATE_DIV = 16'd104; // Adjust this value based on your clock frequency and desired baud rate
+
+    always @(posedge clk) begin
+        case (state)
+            STATE_IDLE: begin
+                data_valid <= 1'b0;
+                if (rx == 1'b0) begin // Start bit detected
+                    state <= STATE_START;
+                    clk_div <= 0; // Reset clock divider
+                end
+            end
+
+            STATE_START: begin
+                if (clk_div == BAUD_RATE_DIV / 2) begin // Wait for half a bit time
+                    state <= STATE_DATA;
+                    bit_count <= 0; // Reset bit count
+                    clk_div <= 0; // Reset clock divider
+                end else begin
+                    clk_div <= clk_div + 1; // Increment clock divider
+                end
+            end
+
+            STATE_DATA: begin
+                if (clk_div == BAUD_RATE_DIV) begin // Wait for a full bit time
+                    shift_reg <= {rx, shift_reg[7:1]}; // Shift in the received bit
+                    bit_count <= bit_count + 1; // Increment bit count
+                    clk_div <= 0; // Reset clock divider
+
+                    if (bit_count == 4'd7) begin // If 8 bits received
+                        state <= STATE_STOP; // Move to stop bit state
+                    end
+                end else begin
+                    clk_div <= clk_div + 1; // Increment clock divider
+                end
+            end
+
+            STATE_STOP: begin
+                if (clk_div == BAUD_RATE_DIV) begin // Wait for stop bit
+                    rxbyte <= shift_reg; // Output the received byte
+                    data_valid <= 1'b1; // Indicate that data is valid
+                    state <= STATE_IDLE; // Go back to idle state
+                end else begin
+                    clk_div <= clk_div + 1; // Increment clock divider
+                end
+            end
+
+        endcase
+    end
+
+endmodule
